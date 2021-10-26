@@ -2,8 +2,11 @@
     background-color: #060b26;
     height: 80px;
     display: flex;
-    justify-content: start;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    padding-right: 50px;
+    color: #fff;
   }
   
   .menu-bars {

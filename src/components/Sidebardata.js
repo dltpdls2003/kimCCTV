@@ -11,12 +11,7 @@ export const Sidebardata = [
         icon:<AiIcons.AiFillHome />,
         cName: 'nav-text'
     },
-    {
-        title: 'CCTV Lists',
-        path:'/cctv',
-        icon:<AiIcons.AiTwotoneVideoCamera />,
-        cName: 'nav-text'
-    },
+   
     {
         title: 'Report',
         path:'/reports',

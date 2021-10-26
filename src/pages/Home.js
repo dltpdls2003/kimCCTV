@@ -1,9 +1,11 @@
 import React from 'react'
+import Web from '../components/web';
 
 function Home() {
     return (
         <div className='home'>
-            <h1>Home</h1>
+            <Web />         
+            <p>CCTV.01</p>
         </div>
     )
 }
