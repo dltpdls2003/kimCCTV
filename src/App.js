@@ -9,7 +9,7 @@ import Reports from './pages/Reports';
 function App() {
   return (
     <>
-    <Router>
+    <Router bashname="">
       <Navbar />
       <Switch>
         <Route path='/' exact component={Home} />

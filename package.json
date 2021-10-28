@@ -1,4 +1,4 @@
-{
+{ 
   "name": "react-sidebar-v1",
   "version": "0.1.0",
   "private": true,
@@ -19,6 +19,7 @@
   },
 
   "proxy": "http://3.35.107.166:8080",
+ 
 
   "scripts": {
     "start": "react-scripts start",

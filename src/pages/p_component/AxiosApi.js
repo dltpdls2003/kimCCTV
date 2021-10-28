@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import axios from 'axios';
+
 import {Table,
         TableCell,
         TableContainer,
@@ -24,7 +25,7 @@ const AxiosApi = ()=>{
       const photo_url = 'http://3.35.107.166:8080/behavior/list/';
     return (
         <TableContainer component={Paper}>
-            <Table data={data}>
+            <Table data={data} className="table" >
                 <TableHead>
                     <TableRow>
                         <TableCell align="center">No.</TableCell>
@@ -33,8 +34,9 @@ const AxiosApi = ()=>{
                         <TableCell align="center">Photo</TableCell>
                     </TableRow>
                 </TableHead>
-                <TableBody>
+                <TableBody >
                {data.map((datas,i) => (
+                   
                    <TableRow key={datas.id}>
                        <TableCell align="center">{i+1}</TableCell>
                         <TableCell align="center">{datas.cctv}</TableCell>
@@ -52,7 +54,7 @@ const AxiosApi = ()=>{
 } else { 
     return (
         <div>
-            <button onClick={serchApi}> 불러오기 </button>
+            {serchApi()}
         </div>
     )
 }
