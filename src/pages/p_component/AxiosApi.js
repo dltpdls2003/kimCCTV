@@ -8,9 +8,11 @@ import {Table,
         TableRow,
         Paper, 
         TableBody} from '@material-ui/core';
+import { MdSortByAlpha } from 'react-icons/md';
 
 const AxiosApi = ()=>{
   const [data, setData] = useState([]);
+
   function serchApi(){
     axios.get('http://3.35.107.166:8080/behavior/list')
       .then(function(response){
@@ -21,11 +23,14 @@ const AxiosApi = ()=>{
           console.log("실패");
       })
   }
+
+
   if(data.length > 0) {
       const photo_url = 'http://3.35.107.166:8080/behavior/list/';
+
     return (
         <TableContainer component={Paper}>
-            <Table data={data} className="table" >
+            <Table data={data} className="table">
                 <TableHead>
                     <TableRow>
                         <TableCell align="center">No.</TableCell>
@@ -41,7 +46,7 @@ const AxiosApi = ()=>{
                        <TableCell align="center">{i+1}</TableCell>
                         <TableCell align="center">{datas.cctv}</TableCell>
                         <TableCell align="center">{datas.regdate}</TableCell>
-                        <TableCell align="center"><img src={photo_url+datas.file} alt="img" width="80px" height="80"/></TableCell>
+                        <TableCell align="center"><img src={photo_url+datas.file} alt="img" width="100px" height="80"/></TableCell>
 
                    </TableRow>
                ))}
